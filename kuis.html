@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Membuat Kuis Sederhana Menggunakan Javascript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript">
+        var soal;
+        var jawaban;
+        var jumlahSoal = 0;
+        var benar = 0;
+        var salah = 0;
+        
+        var pesan;
+        
+        document.writeln("<h1>Membuat Kuis Sederhana Menggunakan Javascript</h1><hr />");
+        
+        
+        while (jumlahSoal<5) {
+            if (jumlahSoal==1) {
+                soal = window.prompt("Apakah JavaScript bahasa pemrograman paling keren sedunia");
+                jawaban = "Ya";
+            }
+            
+            if (jumlahSoal==2) {
+                soal = window.prompt(pesan + "\n\n" + "Siapa nama dosen yang mengajar kuliah ini ?");
+                jawaban = "Oskar";
+            }
+            
+            if (jumlahSoal==3) {
+                soal = window.prompt(pesan + "\n\n" + "Kata yang paling bagus mendeskripsikan koding?");
+                soal = soal.toLowerCase();
+                jawaban = "Membahagiakan";
+            }
+            if (jumlahSoal==4) {
+                soal = window.prompt(pesan + "\n\n" + "Apa yang membuat anda suka coding?");
+                soal = soal.toLowerCase();
+                jawaban = "Hobi";
+            }
+            if (jumlahSoal==5) {
+                soal = window.prompt(pesan + "\n\n" + "Apakah anda suka coding?");
+                soal = soal.toLowerCase();
+                jawaban = "Iya";
+            }
+            
+            if (soal==jawaban) {
+                benar += 1;
+                pesan = "Jawaban Anda Benar";
+            }
+            else {
+                salah += 1;
+                pesan = "Jawaban Anda Salah";
+            }
+            
+            jumlahSoal += +1;
+        }
+        
+        document.writeln("<p>Anda menjawab : <b>" + benar
+                + "</b> sampai <b>" + jumlahSoal + "</b> soal dengan jujur!</p>");
+       
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
